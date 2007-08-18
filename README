@@ -1,0 +1,7 @@
+POE::Loop::Glib
+
+This is POE::Loop::Glib, a module to integrate the Glib mainloop
+with POE.
+
+
+-- martijn
