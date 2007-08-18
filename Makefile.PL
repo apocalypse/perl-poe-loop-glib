@@ -4,10 +4,10 @@ use ExtUtils::MakeMaker;
 
 sub MY::postamble {
    package MY;
-   "\npredist: all\n" .
+   "\ngentests :\n" .
 #   "\tcvs2cl\n" .
-   "\t\$(MAKE) manifest\n" .
-   "\t\$(MAKE) tardist\n"
+   "\tpoe-gen-tests --dirbase t/ --loop Glib\n" .
+   "\n"
 }
 
 WriteMakefile(
@@ -18,9 +18,14 @@ WriteMakefile(
       'POE' => '0.30',
       'Glib' => '0',
    },
+
    dist => {
       COMPRESS     =>'gzip',
       SUFFIX       =>'gz',
-      DIST_DEFAULT => 'predist',
+      DIST_DEFAULT => 'all gentests  manifest tardist',
    },
+
+   test => {
+      TESTS => "t/*.t t/Glib/*.t",
+   }
 );

@@ -84,4 +84,10 @@ L<POE>, L<POE::Loop>, L<Glib>, L<Glib::MainLoop>
 Please see L<POE> for more information about authors, contributors,
 and POE's licensing.
 
+=for poe_tests
+
+{
+	module => 'Glib',
+}
+
 =cut
