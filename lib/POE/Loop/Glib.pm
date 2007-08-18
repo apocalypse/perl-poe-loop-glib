@@ -46,8 +46,7 @@ sub loop_attach_uidestroy {
 sub loop_initialize {
   my $self = shift;
 
-  $glib_mainloop = Glib::MainLoop->new unless ($Glib::main_depth > 0);
-
+  $glib_mainloop = Glib::MainLoop->new unless (Glib::main_depth() > 0);
 }
 
 sub loop_run {
