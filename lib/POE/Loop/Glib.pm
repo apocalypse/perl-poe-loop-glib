@@ -43,18 +43,36 @@ sub loop_attach_uidestroy {
       }
     );
 }
+
 sub loop_initialize {
   my $self = shift;
 
   $glib_mainloop = Glib::MainLoop->new unless (Glib::main_depth() > 0);
+  Glib->install_exception_handler (\&ex);
+
 }
 
 sub loop_run {
   (defined $glib_mainloop) && $glib_mainloop->run;
+  if (defined $POE::Kernel::_glib_loop_exception) {
+	my $ex = $POE::Kernel::_glib_loop_exception;
+	undef $POE::Kernel::_glib_loop_exception;
+  	die $ex;
+  }
 }
 
 sub loop_halt {
   (defined $glib_mainloop) && $glib_mainloop->quit;
+}
+
+our $_glib_loop_exception;
+
+sub ex {
+  $_glib_loop_exception = shift;
+  &loop_finalize;
+  &loop_halt;
+
+  return 0;
 }
 
 1;
