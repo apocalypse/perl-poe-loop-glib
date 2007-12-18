@@ -8,7 +8,7 @@ use strict;
 
 use POE::Kernel; # for MakeMaker
 use vars qw($VERSION);
-$VERSION = do {my@r=(0,q$Rev: 23 $=~/\d+/g);sprintf"%d."."%04d"x$#r,@r};
+$VERSION = do {my@r=(0,q$Rev: 30 $=~/\d+/g);sprintf"%d."."%04d"x$#r,@r};
 
 # Include common signal handling.
 use POE::Loop::GlibCommon;

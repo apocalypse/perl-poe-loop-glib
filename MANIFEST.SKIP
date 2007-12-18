@@ -12,6 +12,7 @@
 \bpm_to_blib$
 \bblibdirs$
 ^MANIFEST\.SKIP$
+\.tar\.gz$
 
 # Avoid Module::Build generated and utility files.
 \bBuild$
@@ -25,3 +26,6 @@
 \#$
 \b\.#
 \.swp$
+run_network_tests
+test-output.err
+^POE-Loop-Glib/
