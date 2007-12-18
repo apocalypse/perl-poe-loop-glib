@@ -16,11 +16,15 @@ sub MY::postamble {
 
 WriteMakefile(
    MAKEFILE => 'Makefile',
+   AUTHOR => 'Martijn van Beers  <martijn@cpan.org>',
+   LICENSE => 'GPL',
    VERSION_FROM => 'lib/POE/Loop/Glib.pm',
+   ABSTRACT_FROM => 'lib/POE/Loop/Glib.pm',
    NAME => 'POE::Loop::Glib',
    PREREQ_PM => {
       'POE' => '0.30',
       'Glib' => '0',
+      'POE::Test::DondeEstan' => '0',
    },
 
    dist => {
