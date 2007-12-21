@@ -4,15 +4,12 @@ use ExtUtils::MakeMaker;
 
 # the POE::Test::Loops tests check for this file to determine whether
 # we want to run network tests. for now, always run them.
-open(TOUCH,"+>run_network_tests") and close TOUCH;
+#open(TOUCH,"+>run_network_tests") and close TOUCH;
+#
+#system(
+#	"poe-gen-tests", "--dirbase", "t/", "--loop", "Glib"
+#) and die $!;
 
-sub MY::postamble {
-   package MY;
-   "\ngentests :\n" .
-#   "\tcvs2cl\n" .
-   "\tpoe-gen-tests --dirbase t/ --loop Glib\n" .
-   "\n"
-}
 
 WriteMakefile(
    MAKEFILE => 'Makefile',
@@ -24,7 +21,7 @@ WriteMakefile(
    PREREQ_PM => {
       'POE' => '0.30',
       'Glib' => '0',
-      'POE::Test::DondeEstan' => '0',
+#      'POE::Test::DondeEstan' => '0',
    },
 
    dist => {

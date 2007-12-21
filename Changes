@@ -1,0 +1,12 @@
+0.31
+	- Merge GlibCommon.pm into Glib.pm since there are no other Glib
+	based loops anymore
+	- improve kwalitee
+	- list POE::Test::DondeEstan as (build) requirement
+
+0.30
+	- Use POE::Test::Loops
+	- Add an exeption handler to exit the loop and rethrows the exeption
+
+earlier
+	- lost in the mists of time
