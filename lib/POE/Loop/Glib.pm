@@ -7,7 +7,7 @@ use warnings;
 
 use POE::Kernel; # for MakeMaker
 use vars qw($VERSION);
-$VERSION = '0.0031';
+$VERSION = '0.0033';
 
 # Include common signal handling.
 use POE::Loop::PerlSignals;

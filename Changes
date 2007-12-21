@@ -1,3 +1,5 @@
+0.33    - Include the POE::Test::Loops tests in the dist for now
+
 0.31
 	- Merge GlibCommon.pm into Glib.pm since there are no other Glib
 	based loops anymore
