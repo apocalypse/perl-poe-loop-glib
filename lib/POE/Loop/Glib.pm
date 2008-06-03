@@ -7,7 +7,7 @@ use warnings;
 
 use POE::Kernel; # for MakeMaker
 use vars qw($VERSION);
-$VERSION = '0.0033';
+$VERSION = '0.0034';
 
 # Include common signal handling.
 use POE::Loop::PerlSignals;
@@ -15,6 +15,7 @@ use POE::Loop::PerlSignals;
 # Everything plugs into POE::Kernel.
 package POE::Kernel;
 use strict;
+use warnings;
 
 my $_watcher_timer;
 my $_idle_timer;
@@ -309,9 +310,10 @@ L<POE>, L<POE::Loop>, L<Glib>, L<Glib::MainLoop>
 
 Martijn van Beers  <martijn@cpan.org>
 
-and POE's licensing.
+=head1 LICENCE
 
-=head1 LICENCE GPL
+POE::Loop::Glib is released under the GPL version 2.0 or higher.
+See the file LICENCE for details. 
 
 =for poe_tests
 
