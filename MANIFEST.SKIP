@@ -13,6 +13,10 @@
 \bblibdirs$
 ^MANIFEST\.SKIP$
 \.tar\.gz$
+\.releaserc
+
+# Avoid Devel::Cover files
+\bcover_db\b
 
 # Avoid Module::Build generated and utility files.
 \bBuild$
@@ -28,4 +32,7 @@
 \.swp$
 run_network_tests
 test-output.err
-^POE-Loop-Glib/
+\bPOE-Loop-Glib
+
+# Avoid generated tests
+\bt/glib

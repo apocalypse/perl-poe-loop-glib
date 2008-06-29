@@ -7,7 +7,7 @@ use warnings;
 
 use POE::Kernel; # for MakeMaker
 use vars qw($VERSION);
-$VERSION = '0.0034';
+$VERSION = '0.0035';
 
 # Include common signal handling.
 use POE::Loop::PerlSignals;
@@ -314,11 +314,5 @@ Martijn van Beers  <martijn@cpan.org>
 
 POE::Loop::Glib is released under the GPL version 2.0 or higher.
 See the file LICENCE for details. 
-
-=for poe_tests
-
-{
-	module => 'Glib',
-}
 
 =cut
