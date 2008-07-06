@@ -25,6 +25,9 @@ gen_loop_tests('t/', 'Glib');
 
 # this gives POE::Kernel as well, so do it manually
 # auto_provides;
-provides('POE::Loop::Glib' => {file =>'lib/POE/Loop/Glib.pm'});
+provides('POE::Loop::Glib' => {
+                file =>'lib/POE/Loop/Glib.pm',
+                version => '0.037',
+        });
 
 WriteAll;
