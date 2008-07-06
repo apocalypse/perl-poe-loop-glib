@@ -1,21 +1,20 @@
+# vim: expandtab
 use inc::Module::Install;
 
-name		'POE-Loop-Glib';
-perl_version	'5.006';
-all_from	'lib/POE/Loop/Glib.pm';
+name            'POE-Loop-Glib';
+perl_version    '5.006';
+all_from        'lib/POE/Loop/Glib.pm';
 
 
-requires 'POE'	=> '1.0';
-requires 'Glib'	=> '1.181';
-
-configure_requires 'POE::Test::Loops' => '1.001';
+requires 'POE'  => '1.003';
+requires 'Glib' => '1.181';
 
 test_requires 'Test::More' => '0';
 
-recommends 'Win32::Console'	=> 0;
-recommends 'Term::Readkey'	=> 0;
-recommends 'Socket6'		=> 0;
-recommends 'IO::Pty'		=> 0;
+recommends 'Win32::Console'     => 0;
+recommends 'Term::Readkey'      => 0;
+recommends 'Socket6'            => 0;
+recommends 'IO::Pty'            => 0;
 
 open (TOUCH, "+>run_network_tests") and close TOUCH;
 

@@ -7,7 +7,7 @@ use warnings;
 
 use POE::Kernel; # for MakeMaker
 use vars qw($VERSION);
-$VERSION = '0.0035';
+$VERSION = '0.0036';
 
 # Include common signal handling.
 use POE::Loop::PerlSignals;
@@ -16,6 +16,7 @@ use POE::Loop::PerlSignals;
 package POE::Kernel;
 use strict;
 use warnings;
+no warnings 'redefine';
 
 my $_watcher_timer;
 my $_idle_timer;
