@@ -1,17 +1,18 @@
-0.36    - Suppress redefinition warnings
+0.037   - fix provides so PAUSE picks up our version again.
+0.0036  - Suppress redefinition warnings
         - Update our POE::Test::Loops requirement since it has new tests
-0.35	- Use new POE::Test::Loops to generate the tests at build time
+0.0035  - Use new POE::Test::Loops to generate the tests at build time
 
-0.34	- Switch to Module::Install
+0.0034  - Switch to Module::Install
 
-0.33    - Include the POE::Test::Loops tests in the dist for now
+0.0033  - Include the POE::Test::Loops tests in the dist for now
 
-0.31	- Merge GlibCommon.pm into Glib.pm since there are no other Glib
+0.0031	- Merge GlibCommon.pm into Glib.pm since there are no other Glib
 	  based loops anymore
 	- improve kwalitee
 	- list POE::Test::DondeEstan as (build) requirement
 
-0.30	- Use POE::Test::Loops
+0.0030	- Use POE::Test::Loops
 	- Add an exeption handler to exit the loop and rethrows the exeption
 
 earlier	- lost in the mists of time
