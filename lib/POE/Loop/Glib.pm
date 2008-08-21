@@ -13,7 +13,8 @@ $VERSION = '0.037';
 use POE::Loop::PerlSignals;
 
 # Everything plugs into POE::Kernel.
-package POE::Kernel;
+package # Hide from Pause
+  POE::Kernel;
 use strict;
 use warnings;
 no warnings 'redefine';
