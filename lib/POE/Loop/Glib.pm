@@ -204,8 +204,7 @@ sub _loop_select_read_callback {
   $self->_data_handle_enqueue_ready(MODE_RD, $fileno);
   $self->_test_if_kernel_is_idle();
 
-  # Return false to stop... probably not with this one.
-  return 0;
+  return 1;
 }
 
 sub _loop_select_write_callback {
@@ -219,8 +218,7 @@ sub _loop_select_write_callback {
   $self->_data_handle_enqueue_ready(MODE_WR, $fileno);
   $self->_test_if_kernel_is_idle();
 
-  # Return false to stop... probably not with this one.
-  return 0;
+  return 1;
 }
 
 
@@ -316,5 +314,16 @@ Martijn van Beers  <martijn@cpan.org>
 
 POE::Loop::Glib is released under the GPL version 2.0 or higher.
 See the file LICENCE for details. 
+
+=cut
++
+=for poe_tests
+
+sub skip_tests {
+  my $test_name = shift;
+  return "Glib tests require the Glib module" if do { eval "use Glib";
+ };
+  return;
+}
 
 =cut
