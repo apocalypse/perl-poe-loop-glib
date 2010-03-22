@@ -9,7 +9,7 @@ my $build = Module::Build->new(
 	'license'		=> 'gpl',
 
 	'dist_abstract'		=> "A bridge that supports Glib's event loop from POE",
-	'dist_author'		=> 'Apocalypse <APOCAL@cpan.org>',
+	'dist_author'		=> 'Martijn van Beers  <martijn@cpan.org>',
 
 	# We don't auto-gen LICENSE because we want gplv2 :(
 	'create_packlist'	=> 1,
@@ -18,7 +18,6 @@ my $build = Module::Build->new(
 	'sign'			=> 0,
 
 	'test_files'		=> [ 't/*.t', 't/glib/*.t' ],
-	'recursive_test_files'	=> 1,
 
 	'add_to_cleanup'	=> [ 'META.yml', 'README', 'Makefile.PL', 'Makefile', 'run_network_tests', 't/glib/*', 't/glib', ],	# automatically generated
 

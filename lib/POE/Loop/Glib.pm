@@ -393,6 +393,9 @@ Martijn van Beers E<lt>martijn@cpan.orgE<gt>
 
 Apocalypse E<lt>apocal@cpan.orgE<gt> is co-maint and tries to fix bugs :)
 
+This module is based on L<POE::Loop::Gtk> which was written by
+Rocco Caputo E<lt>rcaputo@cpan.orgE<gt>, thanks!
+
 =head1 LICENSE
 
 POE::Loop::Glib is released under the GPL version 2.0 or higher.

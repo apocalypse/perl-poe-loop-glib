@@ -1,6 +1,6 @@
 0.038	- Apocalypse is now maintaining this module, thanks to Martijn for letting me do that!
 	- Lots of misc tweaks to POD/Build.PL/stuff :)
-	- Removed Module::Install in favor of Module::Build - yell at me if you need a Makefile.PL!
+	- Removed Module::Install in favor of Module::Build - yell at me if you have problems!
 	- Added patch from RT#55279 to fix 'POE_EVENT_LOOP="Glib" perl -MPOE -e 1' bug
 	- Added patch from RT#53302 to fix filehandle watcher bug
 	- Bumped POE::Test::Loops prereq to 1.034 so we can use the new =begin/=end syntax and more tests!
