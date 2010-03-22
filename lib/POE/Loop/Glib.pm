@@ -301,7 +301,7 @@ __END__
 =begin poe_tests
 
 sub skip_tests {
-	return "Glib tests require the Glib module" if do { eval "use Glib"; $@ };
+  return "Glib tests require the Glib module" if do { eval "use Glib"; $@ };
 }
 
 =end poe_tests
@@ -312,7 +312,7 @@ POE::Loop::Glib - A bridge that supports Glib's event loop from POE
 
 =head1 SYNOPSIS
 
-	die "Don't use this module directly. Please use POE instead.";
+  die "Don't use this module directly. Please use POE instead.";
 
 =head1 ABSTRACT
 
@@ -333,7 +333,7 @@ L<POE>, L<POE::Loop>, L<Glib>, L<Glib::MainLoop>
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc POE::Loop::Glib
+  perldoc POE::Loop::Glib
 
 =head2 Websites
 
