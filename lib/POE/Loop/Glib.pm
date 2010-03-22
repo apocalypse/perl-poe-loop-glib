@@ -7,7 +7,7 @@ use warnings;
 
 use POE::Kernel; # for MakeMaker
 use vars qw($VERSION);
-$VERSION = '0.037';
+$VERSION = '0.038';
 
 # Include common signal handling.
 use POE::Loop::PerlSignals;
@@ -285,16 +285,17 @@ sub ex {
 }
 
 1;
-
 __END__
+
+=for poe_tests sub skip_tests { return "Glib tests require the Glib module" if do { eval "use Glib"; $@ }; return; }
 
 =head1 NAME
 
-POE::Loop::Glib - a bridge that supports Glib's event loop from POE
+POE::Loop::Glib - A bridge that supports Glib's event loop from POE
 
 =head1 SYNOPSIS
 
-See L<POE::Loop>.
+	die "Don't use this module directly. Please use POE instead.";
 
 =head1 DESCRIPTION
 
@@ -308,22 +309,13 @@ L<POE>, L<POE::Loop>, L<Glib>, L<Glib::MainLoop>
 
 =head1 AUTHOR
 
-Martijn van Beers  <martijn@cpan.org>
+Martijn van Beers E<lt>martijn@cpan.orgE<gt>
 
-=head1 LICENCE
+Apocalypse E<lt>apocal@cpan.orgE<gt> is co-maint
+
+=head1 LICENSE
 
 POE::Loop::Glib is released under the GPL version 2.0 or higher.
-See the file LICENCE for details. 
-
-=cut
-+
-=for poe_tests
-
-sub skip_tests {
-  my $test_name = shift;
-  return "Glib tests require the Glib module" if do { eval "use Glib";
- };
-  return;
-}
+See the file LICENSE for details.
 
 =cut

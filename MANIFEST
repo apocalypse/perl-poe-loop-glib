@@ -1,0 +1,16 @@
+Build.PL
+MANIFEST
+MANIFEST.SKIP
+README
+META.yml
+Changes
+LICENSE
+AUTHORS
+
+lib/POE/Loop/Glib.pm
+
+examples/minimal.pl
+
+t/1_load.t
+t/apocalypse.t
+Makefile.PL

@@ -1,38 +1,29 @@
+# skip Eclipse IDE stuff
+\.includepath$
+\.project$
+\.settings/
+
 # Avoid version control files.
-\bRCS\b
-\bCVS\b
-,v$
 \B\.svn\b
 \B\.git\b
 
 # Avoid Makemaker generated and utility files.
 \bMakefile$
-\bblib
+\bblib/
 \bMakeMaker-\d
 \bpm_to_blib$
-\bblibdirs$
-^MANIFEST\.SKIP$
-\.tar\.gz$
-\.releaserc
-
-# Avoid Devel::Cover files
-\bcover_db\b
 
 # Avoid Module::Build generated and utility files.
 \bBuild$
-\b_build
+\b_build/
+^MYMETA.yml$
 
 # Avoid temp and backup files.
 ~$
-\.tmp$
 \.old$
-\.bak$
 \#$
 \b\.#
-\.swp$
-run_network_tests
-test-output.err
-\bPOE-Loop-Glib
+\.bak$
 
-# Avoid generated tests
-\bt/glib
+# our tarballs
+\.tar\.gz$
