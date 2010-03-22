@@ -287,7 +287,7 @@ sub ex {
 1;
 __END__
 
-=for stopwords APOCAL
+=for stopwords APOCAL AnnoCPAN CPAN CPANTS GPL Glib's Kwalitee Martijn RT co com diff github maint
 
 =for poe_tests sub skip_tests { return "Glib tests require the Glib module" if do { eval "use Glib"; $@ }; return; }
 
