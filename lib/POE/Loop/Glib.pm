@@ -265,12 +265,18 @@ sub loop_initialize {
 }
 
 sub loop_run {
-  (defined $glib_mainloop) && $glib_mainloop->run;
-  if (defined $POE::Kernel::_glib_loop_exception) {
-	my $ex = $POE::Kernel::_glib_loop_exception;
-	undef $POE::Kernel::_glib_loop_exception;
-  	die $ex;
-  }
+	my $self = shift;
+
+	# fixes RT#49742
+	# _data_ses_count() *includes* the $poe_kernel object!
+	if ( $self->_data_ses_count() > 1 ) {
+		(defined $glib_mainloop) && $glib_mainloop->run;
+		if (defined $POE::Kernel::_glib_loop_exception) {
+			my $ex = $POE::Kernel::_glib_loop_exception;
+			undef $POE::Kernel::_glib_loop_exception;
+		  	die $ex;
+		}
+	}
 }
 
 sub loop_halt {
