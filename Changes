@@ -2,6 +2,7 @@
 	- Lots of misc tweaks to POD/Build.PL/stuff :)
 	- Removed Module::Install in favor of Module::Build - yell at me if you need a Makefile.PL!
 	- Added patch from RT#55279 to fix 'POE_EVENT_LOOP="Glib" perl -MPOE -e 1' bug
+	- Added patch from RT#53302 to fix filehandle watcher bug
 
 0.037   - fix provides so PAUSE picks up our version again.
 0.0036  - Suppress redefinition warnings
