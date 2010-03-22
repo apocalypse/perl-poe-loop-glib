@@ -287,6 +287,8 @@ sub ex {
 1;
 __END__
 
+=for stopwords APOCAL
+
 =for poe_tests sub skip_tests { return "Glib tests require the Glib module" if do { eval "use Glib"; $@ }; return; }
 
 =head1 NAME
@@ -297,25 +299,89 @@ POE::Loop::Glib - A bridge that supports Glib's event loop from POE
 
 	die "Don't use this module directly. Please use POE instead.";
 
+=head1 ABSTRACT
+
+A bridge that supports Glib's event loop from POE.
+
 =head1 DESCRIPTION
 
 This class is an implementation of the abstract POE::Loop interface.
 It follows POE::Loop's public interface exactly.  Therefore, please
-see L<POE::Loop> for its documentation.
+see L<POE::Loop> for its documentation. Also, please look at L<Glib>
+for more details on using it.
 
 =head1 SEE ALSO
 
 L<POE>, L<POE::Loop>, L<Glib>, L<Glib::MainLoop>
 
+=head1 SUPPORT
+
+You can find documentation for this module with the perldoc command.
+
+    perldoc POE::Loop::Glib
+
+=head2 Websites
+
+=over 4
+
+=item * Search CPAN
+
+L<http://search.cpan.org/dist/POE-Loop-Glib>
+
+=item * AnnoCPAN: Annotated CPAN documentation
+
+L<http://annocpan.org/dist/POE-Loop-Glib>
+
+=item * CPAN Ratings
+
+L<http://cpanratings.perl.org/d/POE-Loop-Glib>
+
+=item * CPAN Forum
+
+L<http://cpanforum.com/dist/POE-Loop-Glib>
+
+=item * RT: CPAN's Request Tracker
+
+L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=POE-Loop-Glib>
+
+=item * CPANTS Kwalitee
+
+L<http://cpants.perl.org/dist/overview/POE-Loop-Glib>
+
+=item * CPAN Testers Results
+
+L<http://cpantesters.org/distro/P/POE-Loop-Glib.html>
+
+=item * CPAN Testers Matrix
+
+L<http://matrix.cpantesters.org/?dist=POE-Loop-Glib>
+
+=item * Git Source Code Repository
+
+This code is currently hosted on github.com under the account "apocalypse". Please feel free to browse it
+and pull from it, or whatever. If you want to contribute patches, please send me a diff or prod me to pull
+from your repository :)
+
+L<http://github.com/apocalypse/perl-poe-loop-glib>
+
+=back
+
+=head2 Bugs
+
+Please report any bugs or feature requests to C<bug-poe-loop-glib at rt.cpan.org>, or through
+the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=POE-Loop-Glib>.  I will be
+notified, and then you'll automatically be notified of progress on your bug as I make changes.
+
 =head1 AUTHOR
 
 Martijn van Beers E<lt>martijn@cpan.orgE<gt>
 
-Apocalypse E<lt>apocal@cpan.orgE<gt> is co-maint
+Apocalypse E<lt>apocal@cpan.orgE<gt> is co-maint and tries to fix bugs :)
 
 =head1 LICENSE
 
 POE::Loop::Glib is released under the GPL version 2.0 or higher.
-See the file LICENSE for details.
+
+The full text of the license can be found in the LICENSE file included with this module.
 
 =cut
