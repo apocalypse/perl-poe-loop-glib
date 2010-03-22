@@ -19,6 +19,9 @@ use strict;
 use warnings;
 no warnings 'redefine';
 
+# Fixes RT#55279
+use Glib;
+
 my $_watcher_timer;
 my $_idle_timer;
 my @fileno_watcher;
