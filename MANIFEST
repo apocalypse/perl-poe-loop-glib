@@ -10,6 +10,7 @@ AUTHORS
 lib/POE/Loop/Glib.pm
 
 examples/minimal.pl
+examples/gtk2_counter.pl
 
 t/1_load.t
 t/apocalypse.t
