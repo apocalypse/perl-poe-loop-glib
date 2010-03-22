@@ -23,7 +23,7 @@ my $build = Module::Build->new(
 	'add_to_cleanup'	=> [ 'META.yml', 'README', 'Makefile.PL', 'Makefile', 'run_network_tests', 't/glib/*', 't/glib', ],	# automatically generated
 
 	'configure_requires'		=> {
-		'POE::Test::Loops'	=> '1.033',
+		'POE::Test::Loops'	=> '1.034',
 	},
 
 	'requires'		=> {
