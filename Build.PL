@@ -19,7 +19,7 @@ my $build = Module::Build->new(
 
 	'test_files'		=> [ 't/*.t', 't/glib/*.t' ],
 
-	'add_to_cleanup'	=> [ 'META.yml', 'README', 'Makefile.PL', 'Makefile', 'run_network_tests', 't/glib/*', 't/glib', ],	# automatically generated
+	'add_to_cleanup'	=> [ 'run_network_tests', 't/glib/*', 't/glib', ],
 
 	'configure_requires'		=> {
 		'POE::Test::Loops'	=> '1.034',
