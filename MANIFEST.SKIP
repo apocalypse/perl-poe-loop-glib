@@ -6,6 +6,7 @@
 # Avoid version control files.
 \B\.svn\b
 \B\.git\b
+^\.gitignore$
 
 # Avoid Makemaker generated and utility files.
 \bMakefile$
@@ -27,3 +28,8 @@
 
 # our tarballs
 \.tar\.gz$
+
+# poe-test-loops stuff
+^run_network_tests$
+\bt/glib/*
+\bt/glib

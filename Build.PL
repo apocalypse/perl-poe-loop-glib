@@ -11,7 +11,7 @@ my $build = Module::Build->new(
 	'dist_abstract'		=> "A bridge that supports Glib's event loop from POE",
 	'dist_author'		=> 'Martijn van Beers  <martijn@cpan.org>',
 
-	# We don't auto-gen LICENSE because we want gplv2 :(
+	# TODO We don't auto-gen LICENSE because we want gplv2 :(
 	'create_packlist'	=> 1,
 	'create_makefile_pl'	=> 'passthrough',
 	'create_readme'		=> 1,
@@ -27,8 +27,8 @@ my $build = Module::Build->new(
 
 	'requires'		=> {
 		# core modules we need
-		'POE'		=> '1.003',
-		'Glib'		=> '1.181',
+		'POE'		=> '1.288',
+		'Glib'		=> '1.222',
 
 		# minimum perl version
 		'perl'		=> '5.006',
