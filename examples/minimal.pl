@@ -15,6 +15,7 @@ POE::Session->create (
 		foo => sub {
 			print "bar\n";
 		},
+		_stop => sub {},
 	},
 );
 

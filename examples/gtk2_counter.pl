@@ -17,6 +17,7 @@ POE::Session->create(
     _start   => \&ui_start,
     ev_count => \&ui_count,
     ev_clear => \&ui_clear,
+    _stop    => sub {},
   }
 );
 
