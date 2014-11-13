@@ -163,20 +163,8 @@ sub loop_resume_filehandle {
 
 
 # Callbacks.
-
-# Event callback to dispatch pending events.
-my $last_time = time();
-
 sub _loop_event_callback {
   my $self = $poe_kernel;
-
-  if (TRACE_STATISTICS) {
-    # TODO - I'm pretty sure the startup time will count as an unfair
-    # amout of idleness.
-    #
-    # TODO - Introducing many new time() syscalls.  Bleah.
-    $self->_data_stat_add('idle_seconds', time() - $last_time);
-  }
 
   $self->_data_ev_dispatch_due();
   $self->_test_if_kernel_is_idle();
@@ -188,8 +176,6 @@ sub _loop_event_callback {
   if ($self->get_event_count()) {
     $_idle_timer = Glib::Idle->add(\&_loop_resume_timer);
   }
-
-  $last_time = time() if TRACE_STATISTICS;
 
   # Return false to stop.
   return 0;
