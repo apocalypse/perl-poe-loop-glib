@@ -36,7 +36,7 @@ my $build = Module::Build->new(
 
 	'recommends'		=> {
 		'Win32::Console'	=> 0,
-		'Term::Readkey'		=> 0,
+		'Term::ReadKey'		=> 0,
 		'Socket6'		=> 0,
 		'IO::Pty'		=> 0,
 	},
